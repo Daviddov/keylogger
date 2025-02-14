@@ -11,8 +11,8 @@ class KeyLoggerManager:
 
     def data_to_buffer(self ,data):
         print("data_to_buffer")
-        databyte =  json.dumps(data).encode('utf-8')
-        return  databyte.decode("utf-8")  # המרה למחרוזת
+        databyte = json.dumps(data).encode('utf-8')
+        return databyte.decode("utf-8")  # המרה למחרוזת
 
     def run(self):
         print("run")
