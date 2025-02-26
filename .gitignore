@@ -1,5 +1,4 @@
-assets/
-extra.txt
+/keyLogger/keylogger.txt
 .idea/
 .venv/
 __pycache__/
